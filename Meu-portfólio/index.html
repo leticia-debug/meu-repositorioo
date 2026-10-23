@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letícia | Vitrine Dev</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Script carregado obrigatoriamente no head com defer -->
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <a href="#" class="logo">Portfólio</a>
+        
+        <!-- Botão hambúrguer com aria-label e aria-expanded -->
+        <button class="btn-menu" id="btn-menu" aria-label="Abrir Menu" aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
+
+        <nav class="navbar" id="navbar">
+            <ul role="menubar">
+                <li role="none"><a href="#inicio" role="menuitem">Início</a></li>
+                <li role="none"><a href="#sobre" role="menuitem">Sobre Mim</a></li>
+                <li role="none"><a href="#habilidades" role="menuitem">Habilidades</a></li>
+                <li role="none"><a href="#projetos" role="menuitem">Projetos</a></li>
+                <li role="none"><a href="#contato" role="menuitem">Contato</a></li>
+            </ul>
+         </nav>
+    </header>
+
+    <main>
+        <!-- Início (Hero) -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1 id="saudacao">Olá!</h1>
+                <p>Sou <strong>Carol</strong>, estudante do curso Técnico em Desenvolvimento de Sistemas no SENAC. Desenvolvedora Front-end em início de carreira focada em criar códigos limpos e interfaces responsivas.</p>
+                <a href="#projetos" class="btn-primary">Ver Projetos</a>
+            </div>
+            <div class="hero-img">
+                <img src="img/perfil.jpeg   " alt="Avatar ilustrativo de Letícia" class="avatar">
+            </div>
+        </section>
+
+        <!-- Sobre Mim -->
+        <section id="sobre" class="about">
+            <h2>Sobre Mim</h2>
+            <div class="about-container">
+                <p>Atualmente estou cursando o ensino técnico e mergulhando de cabeça no universo do desenvolvimento de software. A tecnologia me conquistou pela possibilidade de transformar linhas de código em soluções reais que facilitam o dia a dia das pessoas.</p>
+                <p>Meu objetivo atual é desenvolver interfaces web modernas, acessíveis e focadas na experiência do usuário. Busco uma oportunidade de estágio na área de tecnologia em Natal para aprender com profissionais experientes, colaborar em equipe e evoluir minhas habilidades práticas.</p>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades" class="skills">
+            <h2>Minhas Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card"><h3>HTML</h3><p>Nível: Confortável</p></div>
+                <div class="skill-card"><h3>CSS</h3><p>Nível: Praticando</p></div>
+                <div class="skill-card"><h3>JavaScript</h3><p>Nível: Praticando</p></div>
+                <div class="skill-card"><h3>Git & GitHub</h3><p>Nível: Iniciante</p></div>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="projects">
+            <h2>Meus Projetos</h2>
+            <div class="projects-grid">
+                
+                <!-- Card 1: Planejador de Tarefas -->
+                <article class="project-card">
+                    <div class="project-img-placeholder">📝</div>
+                    <h3>Planejador de Tarefas</h3>
+                    <p>Aplicação focada em produtividade desenvolvida para gerenciar atividades diárias. Conta com manipulação dinâmica do DOM para adicionar e concluir tarefas.</p>
+                    <p class="project-techs"><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
+                    <a href="https://github.com/leticia-debug/planejador-de-tarefas" class="btn-project" target="_blank" rel="noopener">Acessar Repositório</a>
+                </article>
+
+                <!-- Card 2: Sistema de Cinema -->
+                <article class="project-card">
+                    <div class="project-img-placeholder">🎬</div>
+                    <h3>Sistema de Cinema</h3>
+                    <p>Interface interativa que simula a escolha de assentos e compra de ingressos para sessões, calculando valores finais dinamicamente.</p>
+                    <p class="project-techs"><strong>Tecnologias:</strong> HTML, CSS (Grid), JavaScript</p>
+                    <a href="https://github.com/leticia-debug/cineword" class="btn-project" target="_blank" rel="noopener">Acessar Repositório</a>
+                </article>
+
+                <!-- Card 3: Portal de Clínica Médica -->
+                <article class="project-card">
+                    <div class="project-img-placeholder">🩺</div>
+                    <h3>Portal de Clínica Médica</h3>
+                    <p>Landing page profissional para exibição de especialidades médicas e agendamentos estruturada com foco total em acessibilidade digital.</p>
+                    <p class="project-techs"><strong>Tecnologias:</strong> HTML Semântico, CSS (Flexbox)</p>
+                    <a href="https://github.com/leticia-debug/clinica-m-dica" class="btn-project" target="_blank" rel="noopener">Acessar Repositório</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="contact">
+            <h2>Contato</h2>
+            <form id="form-contato" class="contact-form" novalidate>
+                <p class="lgpd-notice">Aviso: Os dados enviados abaixo serão utilizados estritamente para retorno de contato profissional.</p>
+                
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome">
+                    <span class="error-message" id="error-nome"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                    <span class="error-message" id="error-email"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensagem">Mensagem (mínimo 20 caracteres):</label>
+                    <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+                    <span class="error-message" id="error-mensagem"></span>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="consentimento" name="consentimento">
+                    <label for="consentimento">Consinto com o uso dos meus dados fornecidos unicamente para comunicação comercial.</label>
+                    <span class="error-message" id="error-consentimento"></span>
+                </div>
+                
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; <span id="ano-atual"></span> Letícia. Todos os direitos reservados.</p>
+        <a href="#inicio" class="back-to-top" aria-label="Voltar para o topo do site">▲ Voltar ao topo</a>
+    </footer>
+
+</body>
+</html>
